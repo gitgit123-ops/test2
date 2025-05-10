@@ -238,6 +238,7 @@ header
     no-repeat fixed;
     position: relative;
     /*animation*/
+    animation: show 2s ease;
 }
 
 .banner {
@@ -251,7 +252,8 @@ header
 .banner h2 {
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
-    /*animations*/
+    /*animation*/
+    animation: slideFromRight 2s ease;
 }
 
 .banner h1 {
@@ -260,6 +262,7 @@ header
     margin-top: 1.25rem;
     margin-bottom: 2rem;
     /*animations*/
+    animation: slideFromLeft 2s ease-in-out;
 }
 
 .banner-btn {
@@ -354,6 +357,59 @@ header
         float: left;
         width: 25%;
     }
+}
+
+/*
+=================
+Skills (kartica)
+=================
+*/
+.skills-title {
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+    text-align: center;
+}
+
+.skill-card {
+    background: var(--clr-grey-10);
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.skill-card {
+    color: var(--clr-grey-5);
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .skill-img,
+    .skills-title {
+        float: none;
+        width: 100%;
+    }
+
+    .skills-title {
+        padding: 10px;
+        text-align: center;
+    }
+    
 }
 
 /*
@@ -465,7 +521,7 @@ Products
     }
 
     .products-inventory {
-        float: left;
+        float: left; 
         width: 70%;
     }
 
@@ -492,6 +548,67 @@ Products
     .section-centar {
         width: 95vw;
         padding: 4rem 1rem;
+    }
+}
+
+/*
+===================
+Products (kartica)
+===================
+*/
+
+.prod-title {
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+    text-align: center;
+}
+
+.product-card {
+    background: var(--clr-grey-10);
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.prod-img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h4 {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.product-info p {
+    color: var(--clr-grey-5);
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .prod-img,
+    .prod-title {
+        float: none;
+        width: 100%;
+    }
+
+    .prod-title {
+        padding: 10px;
+        text-align: center;
     }
 }
 
@@ -682,6 +799,12 @@ Contact
     }
 }
 
+/*
+===============
+footer
+===============
+*/
+
 .footer {
     background: #222;
     text-align: center;
@@ -708,6 +831,7 @@ Contact
 .company {
     color: var(--clr-primary);
 }
+
 
 
 
